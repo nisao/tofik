@@ -9,7 +9,7 @@ Tofik is a python script based on Julius LVCSR (large vocabulary continuous spee
 Requirements
 ------------
 
-python3, julius-voxforge packages and libnotify-bin - which can be installed with usage of following command:
+python3, julius-voxforge and libnotify-bin packages - which can be installed with usage of following command:
     
     sudo apt-get install python3 julius-voxforge libnotify-bin
     
@@ -47,3 +47,12 @@ Grammar file:
 Vocabulary dictionary(english words dictionary downloaded from - http://www.keithv.com/software/giga/ ):
 
     python/voca.dic
+
+Important system settings
+-------------------------
+
+This is the level that input should be "catched" when listening to music etc.(It shouldn't pass half of scale)
+![Valid noices level](http://kamilskowron.pl/music.png "Valid noices level")
+
+And this one is the level that input command should be "catched"(It shoudn't pass over the whole scale but it should be considerebly louder then music and other noices)
+![Valid user command level](http://kamilskowron.pl/command.png "Valid user command level")
