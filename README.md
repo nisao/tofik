@@ -11,14 +11,14 @@ Requirements
 
 python3 and julius-voxforge packages - which can be installed with usage of following command:
     
-    sudo apt-get install python3 python3-gi julius-voxforge
+    sudo apt-get install python3 julius-voxforge
     
 Usage
 -----
 
 You need to have julius installed in the newest version - you can find step by step guide at link below:
 
-    http://kamilskowron.pl/en/linux/julius-step-by-step-step-1-instalation/
+http://kamilskowron.pl/en/linux/julius-step-by-step-step-1-instalation/
 
 Clone the repository to your home directory:
     
@@ -44,6 +44,6 @@ Grammar file:
 
     python/mediaplayer.grammar
     
-Vocabulary dictionary(english words dictionary downloaded from - http://www.keithv.com/software/giga/):
+Vocabulary dictionary(english words dictionary downloaded from - http://www.keithv.com/software/giga/ ):
 
     python/voca.dic
