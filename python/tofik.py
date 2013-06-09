@@ -154,13 +154,13 @@ class CommandAndControl:
 			ubuntuCommand = self.ubuntu.parse(inputText)
 			tofikCommand  = self.tofik.parse(inputText)        			
 			if command:
-				os.system(command)
+				os.system("killall notify-osd; " + command)
 			elif ubuntuCommand:
-				os.system(ubuntuCommand)				
+				os.system("killall notify-osd; " + ubuntuCommand)				
 			elif tofikCommand:
 				pass				
-			elif not '-q' in sys.argv and not '--quiet' in sys.argv:
-				print('Command not supported by %s.' % self.mediaplayer.name)
+			#elif not '-q' in sys.argv and not '--quiet' in sys.argv:
+			#	print('Command not supported by %s.' % self.mediaplayer.name)
 		else:
 			print("Listening is disabled - say 'voice on' to active Tofik")
 

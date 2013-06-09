@@ -9,9 +9,9 @@ Tofik is a python script based on Julius LVCSR (large vocabulary continuous spee
 Requirements
 ------------
 
-python3 and julius-voxforge packages - which can be installed with usage of following command:
+python3, julius-voxforge packages and libnotify-bin - which can be installed with usage of following command:
     
-    sudo apt-get install python3 julius-voxforge
+    sudo apt-get install python3 julius-voxforge libnotify-bin
     
 Usage
 -----
@@ -27,7 +27,7 @@ Clone the repository to your home directory:
 Go to cloned and simply start Julius:
 
     cd ~/tofik
-    padsp julius -C ./python/julian.jconf | python3 ./python/tofik.py
+    padsp julius -C ./python/julian.jconf 2> /dev/null | python3 ./python/tofik.py
 
 Important files
 ---------------
