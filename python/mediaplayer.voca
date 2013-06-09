@@ -4,9 +4,6 @@
 % NS_E
 </s> sil
 
-% COMPUTER
-COMPUTER k ax m p y uw t ax
-
 % MEDIA
 PLAY	p l ey
 NEXT	n eh k s t
@@ -15,23 +12,25 @@ SHOW	sh ow
 PAUSE	p ao z
 SILENCE	s ay l ax n s
 
-% SHUT
-SHUT	sh ah t
+% VOLUME
+VOLUME	v aa l y uw m
 
-% DOWN
+% UP_DOWN
+UP	ah p
 DOWN	d aw n
 
+% PRINT
+PRINT	p r ih n t
+
 % LOCK
-lock	l aa k
+LOCK	l aa k
+
+% SCREEN
+SCREEN	s k r iy n
 
 % VOICE
-voice	v oy s
+VOICE	v oy s
 
 % ON_OFF
-on	aa n
-off	ao f
-
-% IGNORE
-machines	m ih sh iy n z
-magee	m ah g iy
-melt	m eh l t
+ON	aa n
+OFF	ao f

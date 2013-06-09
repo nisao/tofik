@@ -52,7 +52,7 @@ class Ubuntu:
 	name = "Ubuntu"
 
 	commands = {
-		'lock': 'gnome-screensaver-command -l' 
+		'lock screen': 'gnome-screensaver-command -l' 
 	}
 
 	def parse(self, word):
@@ -72,6 +72,9 @@ class Rhythmbox:
 			'show': 'notify',
 			'pause': 'pause',
 			'silence': 'pause',
+			'volume up':'volume-up',
+			'volume down':'volume-down',
+			'print volume':'print-volume'			
 	}
 	
 	def parse(self, word):
@@ -140,9 +143,6 @@ class CommandAndControl:
 		if not '-q' in sys.argv and not '--quiet' in sys.argv:
 			print('Recognized input:', ' '.join(params).capitalize())
 
-		if (params[0] == 'computer'):
-			params.pop(0)		
-		
 		# Execute the command, if recognized/supported
 		# Before any execution check is listening switched on
 		inputText = ' '.join(params)
