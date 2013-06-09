@@ -44,10 +44,8 @@ class Tofik:
 	def parse(self, word):
 		if word == 'voice on':
 			self.voiceOn = True
-			return self.voiceOn
 		elif word == 'voice off':
 			self.voiceOn = False
-			return self.voiceOn			
 
 class Ubuntu:
 
@@ -58,6 +56,7 @@ class Ubuntu:
 	}
 
 	def parse(self, word):
+		
 		if word in self.commands:
 			return self.commands[word]
 
@@ -76,6 +75,7 @@ class Rhythmbox:
 	}
 	
 	def parse(self, word):
+					
 		if word in self.commands:
 			notification = "notify-send -t 1000 'Rhythmbox COMMAND' ;".replace('COMMAND', self.commands[word].title())
 			return notification + " rhythmbox-client --COMMAND".replace('COMMAND', self.commands[word])
@@ -139,8 +139,10 @@ class CommandAndControl:
 		params = [param.lower() for param in line.split() if param]
 		if not '-q' in sys.argv and not '--quiet' in sys.argv:
 			print('Recognized input:', ' '.join(params).capitalize())
+
+		if (params[0] == 'computer'):
+			params.pop(0)		
 		
-		params.pop(0)
 		# Execute the command, if recognized/supported
 		# Before any execution check is listening switched on
 		inputText = ' '.join(params)
@@ -160,7 +162,7 @@ class CommandAndControl:
 			elif not '-q' in sys.argv and not '--quiet' in sys.argv:
 				print('Command not supported by %s.' % self.mediaplayer.name)
 		else:
-			print("Listening is disabled - say 'Computer Voice On' to active Tofik")
+			print("Listening is disabled - say 'voice on' to active Tofik")
 
 if __name__ == '__main__':
 	try:
